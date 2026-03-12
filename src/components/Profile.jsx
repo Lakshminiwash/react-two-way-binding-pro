@@ -1,6 +1,6 @@
 import React from "react";
 
-const Profile = ({ e, id, alldata, setallData }) => {
+const Profile = ({ elem, id, alldata, setallData }) => {
   function deleteHandler() {
     let prevData = [...alldata];
     prevData.splice(id, 1);
@@ -12,12 +12,12 @@ const Profile = ({ e, id, alldata, setallData }) => {
         <div className="w-20 h-60 overflow-hidden rounded-full bg-amber-400">
           <img
             className="w-[100%] h-[100%] rounded-full bg-cover border-4 border-cyan-600"
-            src={e.img}
+            src={elem.img}
             alt=""
           />
         </div>
-        <h1 className="text-2xl font-bold">{e.name}</h1>
-        <h2>{e.mobile}</h2>
+        <h1 className="text-2xl font-bold">{elem.name}</h1>
+        <h2>{elem.mobile}</h2>
         <div className="flex items-center gap-4">
           <button className="bg-amber-500 border-2 border-black text-xl rounded-full text-white px-3 py-0.5">
             Message

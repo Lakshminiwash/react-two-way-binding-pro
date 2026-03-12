@@ -8,7 +8,7 @@ const Inputs = () => {
     const [mobile, setMobile] = useState("")
     const [address, setAddress] = useState("")
 
-    const savedData = JSON.parse(localStorage.getItem("data"))
+    const savedData = JSON.parse(localStorage.getItem("data"))||[]
     const [allData, setAllData] = useState(savedData)
     localStorage.setItem("data",JSON.stringify(allData))
 
@@ -74,7 +74,7 @@ const Inputs = () => {
     </div>
     <div className='flex-1 bg-black px-12 py-8 flex gap-10 overflow-x-auto whitespace-nowrap'>
         {allData.map((e,idx) => {
-        return (<Profile key={idx} alldata={allData} setallData={setAllData} e={e} id={idx}/>)
+        return (<Profile key={idx} alldata={allData} setallData={setAllData} elem={e} id={idx}/>)
     })}
     </div>
     </div>
